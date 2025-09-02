@@ -1,0 +1,47 @@
+.main-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 650px;
+}
+
+ul {
+  overflow-y: auto;
+  padding: 0;
+  width: 100%;
+  margin: 20px 10px;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.list-buttons {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-delete-button {
+  padding: 10px;
+  color: red;
+  border-radius: 15px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+.item-complete-button {
+  padding: 10px;
+  color: green;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}

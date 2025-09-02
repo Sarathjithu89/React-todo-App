@@ -1,0 +1,42 @@
+.todo-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem;
+  min-width: 600px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 850px;
+}
+.todo-title {
+  margin: 12px 0;
+}
+
+.todo-input {
+  width: 100%;
+  display: flex;
+}
+.todo-input-text {
+  font-size: 18px;
+  padding: 0 8px;
+  display: flex;
+  width: 100%;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.todo-input-button {
+  background-color: rgb(0, 218, 0);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+}
