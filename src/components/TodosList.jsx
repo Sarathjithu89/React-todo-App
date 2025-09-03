@@ -34,7 +34,10 @@ export const TodosList = ({ todos, setTodos }) => {
     <div className="main-list">
       <ul>
         {todos.map((item) => (
-          <li key={item.id}>
+          <li
+            key={item.id}
+            style={item.completed ? { backgroundColor: "lightgreen" } : {}}
+          >
             {editId === item.id ? (
               <>
                 <input
@@ -55,7 +58,7 @@ export const TodosList = ({ todos, setTodos }) => {
                 <p
                   style={
                     item.completed
-                      ? { textDecoration: "line-through", color: "green" }
+                      ? { textDecoration: "line-through" }
                       : { textDecoration: "none" }
                   }
                 >
@@ -71,15 +74,20 @@ export const TodosList = ({ todos, setTodos }) => {
                   <button
                     className="item-complete-button"
                     onClick={() => handleClickComplete(item.id)}
+                    style={
+                      item.completed ? { color: "Green" } : { color: "orange" }
+                    }
                   >
-                    Completed
+                    {item.completed ? "Completed" : "Complete"}
                   </button>
-                  <button
-                    className="item-edit-button"
-                    onClick={() => handleEdit(item.id, item.task)}
-                  >
-                    Edit
-                  </button>
+                  {!item.completed && (
+                    <button
+                      className="item-edit-button"
+                      onClick={() => handleEdit(item.id, item.task)}
+                    >
+                      Edit
+                    </button>
+                  )}
                 </div>
               </>
             )}
