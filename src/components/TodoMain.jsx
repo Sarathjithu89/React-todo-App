@@ -9,8 +9,20 @@ export const TodoMain = () => {
   });
   const [task, setTask] = useState("");
 
+  const [itemcount, setItemcout] = useState(0);
+  const [conpleted, setCompleted] = useState(0);
+
+  useEffect(() => {
+    const completedTasks = todos.filter((task) => task.completed === true);
+    setCompleted(completedTasks.length);
+  });
+
   useEffect(() => {
     localStorage.setItem("Todos", JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
+    setItemcout(todos.length);
   }, [todos]);
 
   const handleClickSave = () => {
@@ -46,6 +58,9 @@ export const TodoMain = () => {
           Add
         </button>
       </div>
+      <h2>
+        Current Tasks : {itemcount} , Completed Tasks : {conpleted}
+      </h2>
 
       {todos.length > 0 ? (
         <TodosList todos={todos} setTodos={setTodos} />

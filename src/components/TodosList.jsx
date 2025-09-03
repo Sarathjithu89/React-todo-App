@@ -11,9 +11,7 @@ export const TodosList = ({ todos, setTodos }) => {
 
   const handleClickComplete = (id) => {
     setTodos((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, completed: !item.completed } : item
-      )
+      prev.map((item) => (item.id === id ? { ...item, completed: true } : item))
     );
   };
 
