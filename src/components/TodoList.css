@@ -24,7 +24,7 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .list-buttons {
-  width: 30%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,4 +44,26 @@ li {
   border-radius: 15px;
   border: none;
   cursor: pointer;
+}
+.item-edit-button {
+  padding: 10px;
+  color: green;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.save-button {
+  padding: 10px;
+  color: green;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.item-edit-input {
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
 }
