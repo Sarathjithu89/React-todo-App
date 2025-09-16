@@ -6,7 +6,11 @@ export const TodosList = ({ todos, setTodos }) => {
   const [editValue, setEditValue] = useState("");
 
   const handleClickDelete = (id) => {
-    setTodos((prev) => prev.filter((item) => item.id !== id));
+    if (confirm("Are you sure you want to delete this task?")) {
+      setTodos((prev) => prev.filter((item) => item.id !== id));
+    } else {
+      return;
+    }
   };
 
   const handleClickComplete = (id) => {
